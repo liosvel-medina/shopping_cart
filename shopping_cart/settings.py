@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'knox',
     'django_filters',
+    'colorfield',
     'api.apps.ApiConfig',
 
 ]
