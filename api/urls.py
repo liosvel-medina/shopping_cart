@@ -5,7 +5,6 @@ from knox import views as knox_views
 from api import views, viewsets
 
 router = routers.DefaultRouter()
-# router.register(r'products', viewsets.ProductViewSet)
 router.register(r'caps', viewsets.CapViewSet)
 router.register(r'tshirts', viewsets.TShirtViewSet)
 

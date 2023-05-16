@@ -31,6 +31,7 @@ class Product(models.Model):
     initial_stock = models.IntegerField()
     current_stock = models.IntegerField()
     is_deleted = models.BooleanField(default=False)
+    deleted_date = models.DateField(null=True, blank=True)
 
     def __str__(self) -> str:
         # prduct_type + brand + colors + year + size + composition
