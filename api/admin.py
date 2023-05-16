@@ -29,7 +29,15 @@ class CompositionTabInline(admin.TabularInline):
 
 @admin.register(models.TShirt)
 class TShirtAdmin(admin.ModelAdmin):
-    list_display = ['main_color', 'brand', 'price', 'size', 'sizing', 'is_deleted']
+    list_display = ['main_color', 'brand',
+                    'price', 'size', 'sizing', 'is_deleted']
     list_display_links = list_display
     filter_horizontal = ['secondary_colors']
     inlines = [CompositionTabInline]
+
+
+@admin.register(models.Product)
+class ProductAdmin(admin.ModelAdmin):
+    list_display = ['main_color', 'brand', 'price', 'is_deleted']
+    list_display_links = list_display
+    filter_horizontal = ['secondary_colors']
