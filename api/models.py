@@ -32,9 +32,6 @@ class Product(models.Model):
     current_stock = models.IntegerField()
     is_deleted = models.BooleanField(default=False)
 
-    class Meta:
-        abstract = True
-
     def __str__(self) -> str:
         # prduct_type + brand + colors + year + size + composition
         return f'{self.brand}-{self.main_color.name}-{self.created_date.year}'
